@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Controller">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Connect4" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <StackPane>
+         <children>
+            <AnchorPane fx:id="gameBoardContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="360.0" prefWidth="420.0" StackPane.alignment="CENTER" />
+            <VBox fx:id="panePlayerSelect">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="How many players?" textAlignment="CENTER" />
+                  <HBox spacing="5.0">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setupOnePlayer" text="1 Player" HBox.hgrow="ALWAYS" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setupTwoPlayers" text="2 Players" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+               <StackPane.margin>
+                  <Insets top="10.0" />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+      <Label fx:id="playerLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" textAlignment="CENTER" />
+      <Label fx:id="statusLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Status label" textAlignment="CENTER" />
+      <Button fx:id="playAgainButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setupStatePlayerSelect" text="Play again" />
+   </children>
+</VBox>
